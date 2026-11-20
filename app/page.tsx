@@ -1,4 +1,4 @@
-import RecipeCard from "./components/RecipeCard";
+import RecipeGrid from "./components/RecipeGrid";
 import { recipes } from "./data/recipes";
 
 export default function Home() {
@@ -29,11 +29,7 @@ export default function Home() {
           <h2 id="recipes-title">A taste of something good</h2>
           <p>{recipes.length} recipes to get you started</p>
         </div>
-        <div className="recipe-grid">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
+        <RecipeGrid recipes={recipes} />
       </section>
 
       <footer className="site-footer">
